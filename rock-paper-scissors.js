@@ -1,43 +1,33 @@
 //array of options for computer and player to choose
-const options = ["rock", "paper", "scissors"];
+const ROCK = 'rock';
+const PAPER = 'paper';
+const SCISSORS = 'scissors';
 
 //generates computer's random selction from options
-function getComputerChoice(){
-    const choice = (options[Math.floor(Math.random() * options.length)]);
-    console.log(choice)
-    return choice; 
+function getComputerChoice() {
+    let choices = [ROCK, PAPER, SCISSORS];
+    let random = choices[Math.floor(Math.random() * choices.length)];
+    return random;
 }
+
 //determines the winner between the computer and the player
-function checkWinner(playerSelection, computerSelection){
-    if(playerSelection == computerSelection){
-        return "Tie";
-    } 
-    else if(
-        (playerSelection == "rock" && computerSelection == "scissors") ||
-        (playerSelection == "paper" && computerSelection == "rock") ||
-        (playerSelection == "scissors" && computerSelection == "paper")
-    ) {
-        return "Player";
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+           return "It's a tie!";
+    } else if (
+        (playerChoice === ROCK && computerChoice === SCISSORS) ||
+        (playerChoice === PAPER && computerChoice === ROCK) ||
+        (playerChoice === SCISSORS &&  computerChoice === PAPER)) {   
+            return "Hurray, you win!";    
     } else {
-        return "Computer";  
-    }
-} 
+        return "Sorry, you lose.";
+    }    
+}
 
 //displays message of who won the round
-function playRound(playerSelection, computerSelection){
-        const result = checkWinner(playerSelection, computerSelection)
-        if(result == "Tie"){
-            return 'It\'s a tie!'
-        } 
-        else if(result == "Player"){
-            return `You win, ${playerSelection} beats ${computerSelection}!`
-        }
-        else{
-            return `You lose, ${computerSelection} beats ${playerSelection}.`
-        }
-    }
+let computerChoice = getComputerChoice();
+let playerChoice = prompt("Choose your weapon.");
+console.log("player: " + playerChoice);
+console.log("computer: " + computerChoice);
+console.log(playRound(playerChoice, computerChoice));
 
-
-const playerSelection = prompt("Enter your selection: rock, paper or scissors.").toLowerCase();
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
