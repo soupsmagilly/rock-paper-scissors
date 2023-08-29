@@ -4,19 +4,20 @@
         <meta charset="utf-8">
         <title>Rock Paper Scissors</title>
         <script src="rock-paper-scissors.js" defer></script>
+        <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
-        <h1>Rock Paper Scissors</h1>
+        <h1 class="title">Rock Paper Scissors</h1>
+        <div class="winnerWinner"></div>
         <div class="container">
-            <button class="rock">ROCK</button>
-            <button class="paper" >PAPER</button>
-            <button class="scissors">SCISSORS</button>
+            <button  class="rock" ><img src="images/rock.png" alt="Cartoon picture of a rock." width="300px"></button>
+            <button  class="paper" ><img src="images/paper.png" alt="Cartoon picture of a piece of notebook paper." width="300px"></button>
+            <button  class="scissors"><img src="images/scissors.png" alt="Cartoon picture of a pair of scissors." width="300px"></button>
        </div> 
-        <div class="outcome">
         <div class="running-score">
             <span class="player-score">Player Score:</span>
             <span class="comp-score">Computer Score:</span>
         </div>
-       </div>
+        <div class="outcome"></div>
     </body>
 </html>

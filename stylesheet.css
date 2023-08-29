@@ -1,0 +1,68 @@
+.title {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 32px;
+    color: #45a6ab;
+}
+
+.container {
+     display: flex;
+    justify-content: center;
+   
+} 
+
+.rock,
+.paper,
+.scissors {
+    margin: 20px 40px 20px 40px; 
+    background-color: transparent;
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: double;
+    flex-shrink: 5;
+}
+
+.rock {
+    border-color: #F19960;
+}
+
+.paper {
+    border-color: #a0ac4f;
+}
+
+.scissors {
+    border-color: #ce8389;
+}
+
+.running-score {
+   display: flex;
+   justify-content: space-around;
+   margin: 32px;
+   font-size: 28px;
+   color: #1b888d;
+   font-family: monospace;
+}
+
+.outcome {
+    display: flex;
+    justify-content: center;
+    color: #135e46;
+    font-family: monospace;
+    font-size: 28px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.winnerWinner {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 28px;
+    color: #d63a21;
+    text-align: center;
+}
