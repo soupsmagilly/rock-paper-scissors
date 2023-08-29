@@ -3,3 +3,5 @@ This is the Rock, Paper, Scissors game from The Odin Project. The player takes o
 
 What I learned:
 How to randomly select items out of an array, call functions, manipulate the DOM, and organize a project with HTML, Javascript and CSS.  
+
+Live preview link:  https://soupsmagilly.github.io/rock-paper-scissors/
